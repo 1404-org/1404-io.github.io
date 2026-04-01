@@ -1,0 +1,207 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import { SITE } from '../../lib/constants';
+
+const suites = [
+  {
+    name: 'Research & Analysis',
+    skills: [
+      'Comparable company analysis',
+      'Precedent transaction research',
+      'Industry research and market sizing',
+      'Public filing analysis (10-K, 10-Q, S-1, proxy)',
+      'News and sentiment monitoring',
+    ],
+  },
+  {
+    name: 'Financial Modeling',
+    skills: [
+      'DCF model assembly',
+      'LBO modeling',
+      'Merger consequence analysis',
+      'Accretion / dilution analysis',
+      'Sensitivity tables and scenario analysis',
+    ],
+  },
+  {
+    name: 'Presentation',
+    skills: [
+      'Pitchbook generation',
+      'Investment memoranda',
+      'Management presentation materials',
+      'Board presentations',
+      'Credential decks',
+    ],
+  },
+  {
+    name: 'Deal Execution',
+    skills: [
+      'Due diligence checklist management',
+      'Data room organization',
+      'Information request tracking',
+      'Deal timeline and milestone tracking',
+      'Closing checklist management',
+    ],
+  },
+];
+---
+
+<PageLayout
+  title="Analyst One — 1404 | AI Analyst Teams for Investment Banking"
+  description="AI agent teams that handle the research, modeling, and presentation work in investment banking. Comps, DCFs, pitchbooks, and deal execution."
+>
+  <!-- Header -->
+  <section class="max-w-5xl mx-auto px-6 pt-40 pb-24 md:pb-32">
+    <header class="mb-20">
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-text-primary leading-tight">
+        Analyst One
+      </h1>
+      <p class="mt-6 text-text-secondary text-lg leading-relaxed max-w-2xl">
+        AI analyst teams for investment banking and financial services.
+      </p>
+    </header>
+
+    <!-- The Problem -->
+    <div class="mb-20">
+      <SectionHeading title="The bottleneck is assembly, not thinking" />
+
+      <div class="space-y-6 text-text-body text-base leading-relaxed">
+        <p>
+          Junior analysts at investment banks work 80 to 100 hour weeks. Most of that time is not spent on judgment or strategy. It's spent building comps tables, populating DCF models, assembling pitchbook pages, writing market updates, and compiling due diligence materials. The work is essential, but it's formulaic. The inputs change; the process rarely does.
+        </p>
+        <p>
+          This is the structural inefficiency at the center of investment banking. The analytical output that wins mandates, supports deal execution, and informs committee decisions depends on hundreds of hours of research, formatting, and data assembly performed by the most expensive junior talent in professional services. The work has to be done well, but the intellectual content of most of it is low relative to the time it consumes.
+        </p>
+        <p>
+          Firms that can produce this work faster and more consistently win more mandates, staff more deals per team, and keep the analysts they invest in training. The constraint has always been the ratio of assembly work to available hours, not the talent itself.
+        </p>
+      </div>
+    </div>
+
+    <!-- What Analyst One Does -->
+    <div class="mb-20">
+      <SectionHeading title="What Analyst One does" />
+
+      <div class="space-y-6 text-text-body text-base leading-relaxed">
+        <p>
+          Analyst One is a team of specialized AI agents that handles the research-heavy, assembly-heavy analytical work inside an investment bank — comps, models, pitchbooks, market updates, diligence materials. It covers the 60 to 70 percent of analyst work that is compilation, formatting, and routine analysis.
+        </p>
+        <p>
+          The agents don't replace analysts. They handle the work that keeps analysts at the office until 2 AM so those analysts can focus on what actually differentiates a bank: judgment, client relationships, and deal strategy. An analyst reviewing and refining agent-produced output operates at a fundamentally different level than one building it from scratch in Excel at midnight.
+        </p>
+      </div>
+    </div>
+
+    <!-- Agent Suites -->
+    <div class="mb-20">
+      <SectionHeading
+        title="Agent suites"
+        subtitle="Four specialized teams, each built for a distinct function in the deal lifecycle."
+      />
+
+      <div class="space-y-10">
+        {suites.map((suite) => (
+          <div class="border border-border-light rounded-sm p-8 bg-bg-card">
+            <h3 class="font-display text-2xl text-text-primary mb-6">
+              {suite.name}
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
+              {suite.skills.map((skill) => (
+                <p class="text-text-secondary text-sm flex items-start gap-2">
+                  <span class="text-copper mt-0.5 shrink-0">&bull;</span>
+                  {skill}
+                </p>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="mb-20 border-t border-border pt-16">
+      <SectionHeading title="How it works" />
+
+      <div class="space-y-6 text-text-body text-base leading-relaxed mb-12">
+        <p>
+          Analyst One connects to your existing data infrastructure — Bloomberg, Capital IQ, PitchBook, FactSet, internal databases, and shared drives. The agents are trained on your firm's formatting standards, deal templates, and analytical frameworks. They learn how your MDs want pitchbooks structured, how your models are laid out, and what your standard output looks like.
+        </p>
+        <p>
+          The result is draft-quality analytical output that conforms to your firm's standards. Analysts review, refine, and apply judgment rather than building from scratch. The agents handle roughly 80 percent of the assembly work, leaving your analysts to focus on the 20 percent — the part that requires experience, context, and the kind of thinking that justifies what you pay them.
+        </p>
+      </div>
+
+      <div class="space-y-10">
+        <div class="border-l-2 border-copper-dim pl-8">
+          <p class="font-mono text-sm text-copper mb-2">Integration</p>
+          <p class="text-text-body text-base leading-relaxed">
+            We connect to your data terminals, internal systems, and document repositories. The agents are configured with your firm's templates, formatting standards, and analytical preferences. This typically takes two to four weeks depending on the complexity of your infrastructure.
+          </p>
+        </div>
+
+        <div class="border-l-2 border-copper-dim pl-8">
+          <p class="font-mono text-sm text-copper mb-2">Training</p>
+          <p class="text-text-body text-base leading-relaxed">
+            Agents are trained on your completed work product — past pitchbooks, models, memos, and presentations. They learn your firm's conventions so their output looks like it came from your team, not from a third party. Analyst feedback during the first few weeks sharpens the output rapidly.
+          </p>
+        </div>
+
+        <div class="border-l-2 border-copper pl-8">
+          <p class="font-mono text-sm text-copper mb-2">Operation</p>
+          <p class="text-text-body text-base leading-relaxed">
+            Analysts request work through a simple interface — "pull comps for a mid-market industrial services platform," "build a preliminary DCF from this CIM," "draft the market overview section for the XYZ pitch." The agents produce draft output. Analysts review and finalize. Turnaround is hours, not days.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Security -->
+    <div class="border-t border-border pt-16">
+      <SectionHeading title="Security and compliance" />
+
+      <p class="text-text-body text-base leading-relaxed mb-12">
+        Investment banking demands the highest standard of data security and confidentiality. Analyst One is built on the same enterprise infrastructure we deploy across all client engagements — purpose-built for environments where data sensitivity is non-negotiable.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="border border-border-light rounded-sm px-5 py-4 bg-bg-card">
+          <p class="font-mono text-xs text-copper mb-1 tracking-wide">SOC 2 Type II</p>
+          <p class="text-text-secondary text-sm">In progress — Q3 2026</p>
+        </div>
+        <div class="border border-border-light rounded-sm px-5 py-4 bg-bg-card">
+          <p class="font-mono text-xs text-copper mb-1 tracking-wide">Client Isolation</p>
+          <p class="text-text-secondary text-sm">Dedicated infrastructure per firm</p>
+        </div>
+        <div class="border border-border-light rounded-sm px-5 py-4 bg-bg-card">
+          <p class="font-mono text-xs text-copper mb-1 tracking-wide">Information Barriers</p>
+          <p class="text-text-secondary text-sm">Deal-level data segregation</p>
+        </div>
+        <div class="border border-border-light rounded-sm px-5 py-4 bg-bg-card">
+          <p class="font-mono text-xs text-copper mb-1 tracking-wide">Audit Logging</p>
+          <p class="text-text-secondary text-sm">Full access and activity trails</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-bg-card border-t border-b border-border">
+    <div class="max-w-6xl mx-auto px-6 py-24 text-center">
+      <h2 class="font-display text-3xl md:text-4xl text-text-primary mb-4">
+        Interested in Analyst One?
+      </h2>
+      <p class="text-text-secondary text-lg mb-10">
+        30 minutes. No pitch deck. A direct conversation about what this looks like inside your firm.
+      </p>
+      <a
+        href={SITE.booking}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block bg-copper text-bg px-6 py-3 text-sm font-medium tracking-wide hover:bg-copper-bright transition-colors duration-200"
+      >
+        Book a Call
+      </a>
+    </div>
+  </section>
+</PageLayout>
