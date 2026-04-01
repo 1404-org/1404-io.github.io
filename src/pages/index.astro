@@ -3,134 +3,184 @@ import PageLayout from '../layouts/PageLayout.astro';
 import Hero from '../components/Hero.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import CTABanner from '../components/CTABanner.astro';
+import ClientLogos from '../components/ClientLogos.astro';
+import { SUITES } from '../lib/constants';
 ---
 
 <PageLayout
-  title="1404 — Technology for Construction & Manufacturing"
-  description="The technology department that construction and manufacturing companies acquire instead of building internally. Fractional CTO, custom software, AI operations."
+  title="1404 — AI Agents for Business Operations"
+  description="AI agent teams that handle executive operations, financial intelligence, business development, acquisitions, and exit preparation. Purpose-built for your business, connected to your systems, managed by us."
 >
   <!-- Hero -->
   <Hero />
 
-  <!-- The Problem -->
+  <!-- What We Build -->
   <section class="max-w-5xl mx-auto px-6 py-24 md:py-32">
-    <SectionHeading title="The Gap" />
+    <SectionHeading title="What we build" />
 
-    <p class="text-5xl md:text-7xl font-display text-copper leading-none mb-8">
-      96%
-    </p>
-    <p class="text-text-body text-lg leading-relaxed mb-12">
-      of construction and manufacturing companies under 100 employees have no technology department. Not a bad one — none at all.
-    </p>
-
-    <p class="text-text-body text-lg leading-relaxed mb-12">
-      The gap isn't software. There are many solid SaaS products. The gap is talent — someone continuously focused on evaluating, building, and maintaining technology for your operations. Even if recruiting was a priority, top-tier technical talent rarely works in these industries. They chase the shiniest job.
-    </p>
-
-    <div class="border-l-2 border-border pl-8 mb-12">
-      <p class="text-xs tracking-widest uppercase text-text-muted mb-6">The Progression</p>
-      <ol class="space-y-4 text-text-secondary list-none">
-        <li class="flex gap-4">
-          <span class="font-mono text-text-muted text-sm w-4 shrink-0">1</span>
-          <span>Paper</span>
-        </li>
-        <li class="flex gap-4">
-          <span class="font-mono text-text-muted text-sm w-4 shrink-0">2</span>
-          <span>Spreadsheets</span>
-        </li>
-        <li class="flex gap-4">
-          <span class="font-mono text-text-muted text-sm w-4 shrink-0">3</span>
-          <span>SaaS tools</span>
-        </li>
-        <li class="flex gap-4">
-          <span class="font-mono text-text-muted text-sm w-4 shrink-0">4</span>
-          <span>Frankenstein stack</span>
-        </li>
-        <li class="flex gap-4 text-text-muted">
-          <span class="font-mono text-sm w-4 shrink-0">5</span>
-          <span>Enterprise + consultants</span>
-        </li>
-        <li class="flex gap-4 text-text-muted">
-          <span class="font-mono text-sm w-4 shrink-0">6</span>
-          <span>Custom systems</span>
-        </li>
-        <li class="flex gap-4 text-text-muted">
-          <span class="font-mono text-sm w-4 shrink-0">7</span>
-          <span>Custom agents</span>
-        </li>
-      </ol>
+    <div class="space-y-6 text-text-body text-base leading-relaxed mb-16">
+      <p>
+        We build agent teams — groups of specialized AI workers that take over specific operational functions in your company. You tell us what's eating your time. We build a team of agents trained on your business, connect them to your existing systems, and manage them on an ongoing basis.
+      </p>
+      <p>
+        Each agent team handles a different function. Some handle the daily executive workload — email triage, morning reports, meeting prep. Others handle financial analysis, or business development, or acquisition research. They run continuously and get better over time because they're learning your business as they work. We offer two ways to work with us.
+      </p>
     </div>
 
-    <p class="text-text-body text-lg leading-relaxed">
-      Most companies are stuck at 2 through 4. The technology to reach 7 exists today. What doesn't exist is the department to get you there.
-    </p>
-  </section>
+    <!-- Two Tiers -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
 
-  <!-- What We Are -->
-  <section class="border-t border-border">
-    <div class="max-w-5xl mx-auto px-6 py-24 md:py-32">
-      <SectionHeading title="What We Are" />
+      <!-- Agent Suites -->
+      <div class="border border-border rounded-sm p-8 bg-bg-card">
+        <p class="font-mono text-xs text-copper mb-4 tracking-wide">AGENT SUITES</p>
+        <h3 class="font-display text-2xl text-text-primary mb-4">Pick the function you need handled</h3>
+        <p class="text-text-body text-base leading-relaxed mb-6">
+          Each suite is a team of agents built for a specific operational function. Start with the one that solves your biggest problem. Add more when you're ready.
+        </p>
+        <a href="/agents" class="text-sm text-copper hover:text-copper-bright transition-colors duration-200">
+          See all suites &rarr;
+        </a>
+      </div>
 
-      <div class="space-y-14">
-        <div>
-          <h3 class="font-display text-2xl text-text-primary mb-4">CTO Leadership</h3>
-          <p class="text-text-body text-base leading-relaxed">
-            Strategy, architecture, and a technology roadmap for your company. Weekly calls with your team, vendor evaluations with actual technical depth, and someone accountable for every technology decision — when to buy, when to build, and why.
-          </p>
-        </div>
-
-        <div>
-          <h3 class="font-display text-2xl text-text-primary mb-4">Custom Systems</h3>
-          <p class="text-text-body text-base leading-relaxed">
-            One application built around how your company actually operates. Sales, project management, inventory, scheduling, financials — all in one place, all talking to each other natively. Not six different logins duct-taped together, and not a Frankenstein of tools welded on over the years. One system, fitted together from the start.
-          </p>
-        </div>
-
-        <div>
-          <h3 class="font-display text-2xl text-text-primary mb-4">AI Operations</h3>
-          <p class="text-text-body text-base leading-relaxed">
-            Agents that run in the background around the clock, checking budgets, schedules, inventory, and utilization every 30 minutes. Your team talks to the system in plain language and gets real answers. The longer it runs, the more it learns about your business — your workflows, your patterns, the things that used to fall through the cracks.
-          </p>
-        </div>
+      <!-- Partnership -->
+      <div class="border border-copper-dim rounded-sm p-8 bg-bg-card">
+        <p class="font-mono text-xs text-copper mb-4 tracking-wide">PARTNERSHIP</p>
+        <h3 class="font-display text-2xl text-text-primary mb-4">The full technology department</h3>
+        <p class="text-text-body text-base leading-relaxed mb-6">
+          CTO leadership, custom engineering, every agent suite, and a research function that monitors what's coming in your industry. For companies that want a full technology department without building one internally.
+        </p>
+        <a href="/partnership" class="text-sm text-copper hover:text-copper-bright transition-colors duration-200">
+          Learn more &rarr;
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- The Urgency -->
+  <!-- The Suites -->
   <section class="border-t border-border">
     <div class="max-w-5xl mx-auto px-6 py-24 md:py-32">
-      <SectionHeading title="The Urgency" />
+      <SectionHeading
+        title="Agent Suites"
+        subtitle="Each suite is a team of specialized agents trained on your business and connected to your systems."
+      />
 
-      <div class="space-y-12 mb-16">
-        <div class="border-l-2 border-copper-dim pl-8">
-          <p class="font-mono text-sm text-copper mb-2">2024 &ndash; 2026</p>
-          <p class="text-text-body leading-relaxed">
-            AI moved from novelty to production tool. The companies paying attention started building infrastructure. The rest assumed it was hype.
-          </p>
-        </div>
-
-        <div class="border-l-2 border-copper-dim pl-8">
-          <p class="font-mono text-sm text-copper mb-2">2027 &ndash; 2029</p>
-          <p class="text-text-body leading-relaxed">
-            Prepared companies operating at 2&ndash;3x efficiency. Their margins wider. Their teams smaller. Their competitors still trying to figure out what changed.
-          </p>
-        </div>
-
-        <div class="border-l-2 border-copper pl-8">
-          <p class="font-mono text-sm text-copper mb-2">2030+</p>
-          <p class="text-text-primary leading-relaxed">
-            Companies without technology infrastructure are not competitive. Period.
-          </p>
-        </div>
+      <div class="space-y-10">
+        {SUITES.map((suite) => (
+          <a href={`/agents/${suite.slug}`} class="block group">
+            <div class="border border-border-light rounded-sm p-8 bg-bg-card hover:border-copper-dim transition-colors duration-200">
+              <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                <h3 class="font-display text-xl text-text-primary group-hover:text-copper transition-colors duration-200">
+                  {suite.name}
+                </h3>
+                <p class="text-xs text-text-muted font-mono shrink-0">
+                  Replaces: {suite.replaces}
+                </p>
+              </div>
+              <p class="text-text-secondary text-sm leading-relaxed">
+                {suite.short}
+              </p>
+            </div>
+          </a>
+        ))}
       </div>
+    </div>
+  </section>
 
-      <div class="bg-bg-card border border-border-light p-8">
-        <p class="text-text-secondary text-sm leading-relaxed">
-          A $20M company at 12% margins makes $2.4M. At 20% margins, it makes $4M. That's $1.6M per year. The difference compounds. After five years, the gap is insurmountable.
+  <!-- Why This Works -->
+  <section class="border-t border-border">
+    <div class="max-w-5xl mx-auto px-6 py-24 md:py-32">
+      <SectionHeading title="Why this works" />
+
+      <div class="space-y-6 text-text-body text-base leading-relaxed mb-16">
+        <p>
+          Most companies have tried some version of AI at this point. They've used ChatGPT, maybe experimented with a copilot tool. The results are usually the same — interesting but not operational. It answers questions, but it doesn't do work.
+        </p>
+        <p>
+          The difference is in how an agent is built. A language model on its own can answer questions, but it can't do anything about the answers — it has no access to your email, financials, CRM, or project tools. What makes an agent operational is connecting it to those systems and then training it on how your business actually works. That's what we do — we build purpose-built teams that know your business and handle work from start to finish.
         </p>
       </div>
+
+      <a href="/how-it-works" class="text-sm text-copper hover:text-copper-bright transition-colors duration-200">
+        See exactly how it works &rarr;
+      </a>
     </div>
   </section>
+
+  <!-- Trust -->
+  <section class="border-t border-border">
+    <div class="max-w-5xl mx-auto px-6 py-24 md:py-32">
+      <SectionHeading title="Built for enterprise" />
+
+      <p class="text-text-body text-base leading-relaxed mb-12">
+        We operate inside your infrastructure — financials, email, project data. That level of access requires security and compliance infrastructure that most firms our size don't build until much later. We started early because the companies we want to work with run due diligence before granting that kind of access.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+        <div class="border border-border-light rounded-sm px-5 py-4 bg-bg-card">
+          <p class="font-mono text-xs text-copper mb-1 tracking-wide">SOC 2 Type II</p>
+          <p class="text-text-secondary text-sm">In progress — Q3 2026</p>
+        </div>
+        <div class="border border-border-light rounded-sm px-5 py-4 bg-bg-card">
+          <p class="font-mono text-xs text-copper mb-1 tracking-wide">Security Policies</p>
+          <p class="text-text-secondary text-sm">14 policies written</p>
+        </div>
+        <div class="border border-border-light rounded-sm px-5 py-4 bg-bg-card">
+          <p class="font-mono text-xs text-copper mb-1 tracking-wide">AI Governance</p>
+          <p class="text-text-secondary text-sm">NIST AI RMF aligned</p>
+        </div>
+        <div class="border border-border-light rounded-sm px-5 py-4 bg-bg-card">
+          <p class="font-mono text-xs text-copper mb-1 tracking-wide">Client Isolation</p>
+          <p class="text-text-secondary text-sm">Dedicated infrastructure per client</p>
+        </div>
+      </div>
+
+      <a href="/trust" class="text-sm text-copper hover:text-copper-bright transition-colors duration-200">
+        Full security and compliance details &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- Backed by TCG -->
+  <section class="border-t border-border">
+    <div class="max-w-5xl mx-auto px-6 py-24 md:py-32">
+      <SectionHeading title="Backed by The Construct Group" />
+
+      <div class="space-y-6 text-text-body text-base leading-relaxed mb-12">
+        <p>
+          1404 was built inside a real operating company. The Construct Group — a national retail fixture installation company — was our first client and became an equity partner after we built their entire technology department from scratch. We built them a 180,000-line unified operations platform, deployed AI agent teams to run daily executive operations, and provide ongoing CTO leadership.
+        </p>
+        <p>
+          TCG continues to operate on our platform and agent infrastructure, and their CEO actively refers other operators to 1404 — which is how most of our clients find us. The agent architecture, security model, and delivery process were all built and validated in production with TCG before we took a second client.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div>
+          <p class="font-display text-3xl md:text-4xl text-copper mb-2">12</p>
+          <p class="text-text-secondary text-sm">Integrated modules</p>
+        </div>
+        <div>
+          <p class="font-display text-3xl md:text-4xl text-copper mb-2">125x</p>
+          <p class="text-text-secondary text-sm">Faster forecasting</p>
+        </div>
+        <div>
+          <p class="font-display text-3xl md:text-4xl text-copper mb-2">75 hrs</p>
+          <p class="text-text-secondary text-sm">Saved per week</p>
+        </div>
+        <div>
+          <p class="font-display text-3xl md:text-4xl text-copper mb-2">98%</p>
+          <p class="text-text-secondary text-sm">Inventory accuracy</p>
+        </div>
+      </div>
+
+      <a href="/case-studies/tcg" class="text-sm text-copper hover:text-copper-bright transition-colors duration-200">
+        Read the full case study &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- Client Logos -->
+  <ClientLogos />
 
   <!-- CTA -->
   <CTABanner />

@@ -5,7 +5,11 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://1404.io',
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      filter: (page) => !page.includes('/analyst/'),
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },

@@ -1,0 +1,45 @@
+---
+import { CLIENT_LOGOS } from '../lib/constants';
+
+interface Props {
+  /** Section heading text. Defaults to "Who We Work With" */
+  heading?: string;
+  /** Max height for each logo in pixels. Defaults to 40 */
+  logoHeight?: number;
+}
+
+const { heading = 'Who We Work With', logoHeight = 40 } = Astro.props;
+const logos = CLIENT_LOGOS.filter((l) => l.src);
+---
+
+{logos.length > 0 && (
+  <section class="border-t border-border">
+    <div class="max-w-5xl mx-auto px-6 py-16 md:py-20">
+      <p class="text-xs tracking-widest uppercase text-text-muted mb-10 text-center">
+        {heading}
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16">
+        {logos.map((logo) => {
+          const img = (
+            <img
+              src={logo.src}
+              alt={logo.name}
+              style={`height: ${logoHeight}px`}
+              class="w-auto opacity-50 hover:opacity-90 transition-opacity duration-300"
+              loading="lazy"
+            />
+          );
+          return logo.href ? (
+            <a href={logo.href} title={logo.name}>
+              {img}
+            </a>
+          ) : (
+            <div title={logo.name}>
+              {img}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+)}
