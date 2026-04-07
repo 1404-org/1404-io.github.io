@@ -1,0 +1,144 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+
+// Per-persona demos pages. URL-only — not linked from nav, noindex, robots.txt disallow.
+// Each entry produces a route at /demos/<slug>.
+//
+// To add a persona:
+//   1. Drop sample PNG files into public/demos/<slug>/
+//   2. Add an entry to PERSONAS inside getStaticPaths below
+//   3. Each deliverable: { file, name, description }
+//      - file: filename in public/demos/<slug>/
+//      - name: short title shown above the image
+//      - description: 1-2 sentence explanation
+
+export function getStaticPaths() {
+  const PERSONAS = [
+    {
+      slug: 're-developer',
+      industry: 'Real Estate Development',
+      role: 'Development Analyst',
+      intro: 'Sample deliverables produced by the Real Estate Development persona. Each one is generated from live system data — pro formas pull from your underwriting model, draw packages assemble from your project management system, IC memos draft from underwriting outputs and comparable transactions, investor reports build from accounting and capital account data. These are 1404-branded test outputs; in a real engagement they carry your brand.',
+      deliverables: [
+        {
+          file: 'dev-pro-forma.png',
+          name: 'Development pro forma',
+          description: 'Multi-tab development model with sources and uses, construction budget, operating pro forma, sale and refinance scenarios, and equity waterfall. Updates when assumptions change.',
+        },
+        {
+          file: 'ic-memo.png',
+          name: 'Investment committee memo',
+          description: 'Eleven-page IC memo with deal summary, market analysis, sponsor comparables, financial projections, risk register, and recommendation. Drafted from underwriting and comp data.',
+        },
+        {
+          file: 'draw-package.png',
+          name: 'Construction draw package',
+          description: 'Complete monthly draw package with cover sheet, sworn statement, lien waivers, AIA G702/G703, and supporting backup. Assembled from project management and accounting systems.',
+        },
+        {
+          file: 'investor-report.png',
+          name: 'Quarterly investor report',
+          description: 'LP-facing quarterly report with portfolio summary, per-asset performance, capital account roll-forward, and waterfall status. Drafted from live operating and accounting data.',
+        },
+      ],
+    },
+    {
+      slug: 'construction',
+      industry: 'Construction',
+      role: 'Construction Operations',
+      intro: 'Sample deliverables produced by the Construction persona. Bids assemble from rate cards and takeoffs, AIA pay applications draft from job cost and schedule of values, WIP schedules calculate percentage-of-completion from live cost data, and COI compliance tracks insurance status across every active subcontractor. These are 1404-branded test outputs; in a real engagement they carry your brand.',
+      deliverables: [
+        {
+          file: 'bid-proposal.png',
+          name: 'Bid proposal',
+          description: 'Branded bid package with scope of work, line-item pricing from rate card, exclusions, qualifications, and submittal. Drafted from takeoff data and project specs.',
+        },
+        {
+          file: 'aia-pay-app.png',
+          name: 'AIA pay application',
+          description: 'G702/G703 pay application with continuation sheet, retention calculation, change order tracking, and schedule of values reconciliation. Generated from job cost data.',
+        },
+        {
+          file: 'wip-schedule.png',
+          name: 'WIP schedule',
+          description: 'Work-in-progress schedule with percentage-of-completion revenue recognition, billings in excess, costs in excess, and gross profit by job. Built from live job cost.',
+        },
+        {
+          file: 'coi-tracker.png',
+          name: 'COI compliance dashboard',
+          description: 'Live insurance compliance tracker by subcontractor — coverage limits, expiry dates, additional insured status, and waiver of subrogation. Auto-flags expiring certs.',
+        },
+      ],
+    },
+  ];
+
+  return PERSONAS.map((p) => ({
+    params: { persona: p.slug },
+    props: { persona: p },
+  }));
+}
+
+const { persona } = Astro.props;
+---
+
+<PageLayout
+  title={`${persona.industry} — Sample Deliverables | 1404`}
+  description={`Live sample deliverables produced by the 1404 ${persona.industry} agent persona.`}
+  noindex={true}
+>
+  <section class="max-w-5xl mx-auto px-6 pt-40 pb-24 md:pb-32">
+    <header class="mb-16">
+      <p class="text-xs tracking-widest uppercase text-copper mb-4">Sample deliverables</p>
+      <h1 class="font-display text-4xl md:text-5xl text-text-primary leading-tight mb-8">
+        {persona.industry}
+      </h1>
+      <p class="text-text-body text-base leading-relaxed max-w-3xl">
+        {persona.intro}
+      </p>
+    </header>
+
+    <div class="space-y-20">
+      {persona.deliverables.map((d) => (
+        <article class="border-t border-border pt-12">
+          <div class="mb-6">
+            <h2 class="font-display text-2xl md:text-3xl text-text-primary mb-3">{d.name}</h2>
+            <p class="text-text-secondary text-sm leading-relaxed max-w-2xl">{d.description}</p>
+          </div>
+
+          <a
+            href={`/demos/${persona.slug}/${d.file}`}
+            target="_blank"
+            rel="noopener"
+            class="block group"
+            aria-label={`Open ${d.name} full size`}
+          >
+            <div class="border border-border-light bg-bg-card overflow-hidden group-hover:border-copper-dim transition-colors duration-200">
+              <img
+                src={`/demos/${persona.slug}/${d.file}`}
+                alt={d.name}
+                loading="lazy"
+                class="w-full h-auto block"
+              />
+            </div>
+            <p class="text-xs text-copper mt-3 group-hover:text-copper-bright transition-colors">
+              Open full size &rarr;
+            </p>
+          </a>
+        </article>
+      ))}
+    </div>
+
+    <div class="border-t border-border mt-24 pt-16">
+      <h2 class="font-display text-2xl md:text-3xl text-text-primary mb-6">Want to see this for your business?</h2>
+      <p class="text-text-body text-base leading-relaxed mb-8 max-w-2xl">
+        These are samples — built once, never connected to a real operating company. In an engagement, every deliverable on this page is generated from your live data, branded for your firm, and runs on your operating cadence. The first 30 days produces a working version connected to your systems.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block border border-copper text-copper hover:bg-copper hover:text-bg px-6 py-3 text-sm tracking-wide transition-colors duration-200"
+      >
+        Talk to us
+      </a>
+    </div>
+  </section>
+</PageLayout>
