@@ -2,96 +2,47 @@
 import PageLayout from '../../layouts/PageLayout.astro';
 
 // Per-persona demos pages. URL-only — not linked from nav, noindex, robots.txt disallow.
-// Each entry produces a route at /demos/<slug>.
 //
-// To add a persona:
-//   1. Drop preview PNG + real file (.xlsx or .pdf) into public/demos/<slug>/
-//   2. Add an entry to PERSONAS inside getStaticPaths below
-//   3. Each deliverable: { preview, file, type, name, description }
-//      - preview: PNG filename used as the visual
-//      - file: real openable file (xlsx or pdf)
-//      - type: 'xlsx' | 'pdf'
-//      - name: short title
-//      - description: 1-2 sentence explanation
+// To add or update a persona:
+//   1. Edit src/data/demos/<slug>.json (the manifest is the source of truth)
+//   2. Run: ~/.1404/scripts/update-demos.py <slug>
+//      (runs the deliverable skills, renders previews, stages files in public/demos/<slug>/)
+//   3. Commit and push — site auto-deploys via GitHub Pages
+//
+// Manifest schema is documented in update-demos.py and ~/agents/docs/demos-pipeline.md
+
+interface Deliverable {
+  skill: string;
+  input: string;
+  type: 'xlsx' | 'pdf';
+  filename: string;
+  preview_filename: string;
+  name: string;
+  description: string;
+}
+
+interface PersonaManifest {
+  slug: string;
+  industry: string;
+  intro: string;
+  deliverables: Deliverable[];
+}
 
 export function getStaticPaths() {
-  const PERSONAS = [
-    {
-      slug: 're-developer',
-      industry: 'Real Estate Development',
-      intro: 'Sample deliverables produced by the Real Estate Development persona. Each one is generated from live system data — pro formas pull from your underwriting model, draw packages assemble from your project management system, IC memos draft from underwriting outputs and comparable transactions, investor reports build from accounting and capital account data. Click any file below to open the real spreadsheet or PDF. These are 1404-branded test outputs; in a real engagement they carry your brand.',
-      deliverables: [
-        {
-          preview: 'dev-pro-forma.png',
-          file: 'dev-pro-forma.xlsx',
-          type: 'xlsx',
-          name: 'Development pro forma',
-          description: 'Multi-tab Excel model: Summary, Assumptions, Sources & Uses, Revenue, OpEx, NOI & Cash Flow, Waterfall, Sensitivity. Updates when assumptions change.',
-        },
-        {
-          preview: 'ic-memo.png',
-          file: 'ic-memo.pdf',
-          type: 'pdf',
-          name: 'Investment committee memo',
-          description: 'Eleven-page IC memo with deal summary, market analysis, sponsor comparables, financial projections, risk register, and recommendation. Drafted from underwriting and comp data.',
-        },
-        {
-          preview: 'draw-package.png',
-          file: 'draw-package.xlsx',
-          type: 'xlsx',
-          name: 'Construction draw package',
-          description: 'Six-tab Excel: Draw Summary, G702, G703, Change Order Log, Budget Summary, Lien Waiver Tracker. Assembled from project management and accounting systems.',
-        },
-        {
-          preview: 'investor-report.png',
-          file: 'investor-report.pdf',
-          type: 'pdf',
-          name: 'Quarterly investor report',
-          description: 'Eight-page LP-facing quarterly report with portfolio summary, per-asset performance, capital account roll-forward, and waterfall status. Drafted from live operating and accounting data.',
-        },
-      ],
-    },
-    {
-      slug: 'construction',
-      industry: 'Construction',
-      intro: 'Sample deliverables produced by the Construction persona. Bids assemble from rate cards and takeoffs, AIA pay applications draft from job cost and schedule of values, WIP schedules calculate percentage-of-completion from live cost data, and COI compliance tracks insurance status across every active subcontractor. Click any file below to open the real spreadsheet or PDF. These are 1404-branded test outputs; in a real engagement they carry your brand.',
-      deliverables: [
-        {
-          preview: 'bid-proposal.png',
-          file: 'bid-proposal.pdf',
-          type: 'pdf',
-          name: 'Bid proposal',
-          description: 'Nine-page branded bid package with scope of work, line-item pricing from rate card, exclusions, qualifications, and submittal. Drafted from takeoff data and project specs.',
-        },
-        {
-          preview: 'aia-pay-app.png',
-          file: 'aia-pay-app.xlsx',
-          type: 'xlsx',
-          name: 'AIA pay application',
-          description: 'G702 and G703 pay application sheets with continuation, retention calculation, change order tracking, and schedule of values reconciliation. Generated from job cost data.',
-        },
-        {
-          preview: 'wip-schedule.png',
-          file: 'wip-schedule.xlsx',
-          type: 'xlsx',
-          name: 'WIP schedule',
-          description: 'Three-tab Excel: WIP Schedule, Prior Period, Change Log. Percentage-of-completion revenue recognition, billings in excess, costs in excess, and gross profit by job.',
-        },
-        {
-          preview: 'coi-tracker.png',
-          file: 'coi-tracker.xlsx',
-          type: 'xlsx',
-          name: 'COI compliance dashboard',
-          description: 'Three-tab Excel: Dashboard, All Subcontractors, Expiring Soon. Tracks coverage limits, expiry dates, additional insured status, and waiver of subrogation across every sub.',
-        },
-      ],
-    },
-  ];
+  const modules = import.meta.glob<{ default: PersonaManifest }>(
+    '../../data/demos/*.json',
+    { eager: true }
+  );
+  const personas: PersonaManifest[] = Object.values(modules).map((m) => m.default);
 
-  return PERSONAS.map((p) => ({
+  return personas.map((p) => ({
     params: { persona: p.slug },
     props: { persona: p },
   }));
+}
+
+interface Props {
+  persona: PersonaManifest;
 }
 
 const { persona } = Astro.props;
@@ -115,8 +66,8 @@ const { persona } = Astro.props;
 
     <div class="space-y-20">
       {persona.deliverables.map((d) => {
-        const fileUrl = `/demos/${persona.slug}/${d.file}`;
-        const previewUrl = `/demos/${persona.slug}/${d.preview}`;
+        const fileUrl = `/demos/${persona.slug}/${d.filename}`;
+        const previewUrl = `/demos/${persona.slug}/${d.preview_filename}`;
         const typeLabel = d.type === 'xlsx' ? 'Excel · xlsx' : 'PDF';
         const actionLabel = d.type === 'xlsx' ? 'Download Excel model' : 'Open PDF';
         return (
