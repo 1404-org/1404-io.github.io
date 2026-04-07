@@ -6,6 +6,7 @@ interface Props {
   title?: string;
   description?: string;
   ogType?: string;
+  noindex?: boolean;
   article?: {
     publishedTime: string;
     author: string;
@@ -16,6 +17,7 @@ const {
   title = SITE.title,
   description = SITE.description,
   ogType = 'website',
+  noindex = false,
   article,
 } = Astro.props;
 
@@ -79,7 +81,7 @@ const articleSchema = article ? {
 
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonicalURL} />
+    {noindex ? <meta name="robots" content="noindex,nofollow" /> : <link rel="canonical" href={canonicalURL} />}
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
