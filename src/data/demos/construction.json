@@ -1,0 +1,43 @@
+{
+  "slug": "construction",
+  "industry": "Construction",
+  "intro": "Sample deliverables produced by the Construction persona. Bids assemble from rate cards and takeoffs, AIA pay applications draft from job cost and schedule of values, WIP schedules calculate percentage-of-completion from live cost data, and COI compliance tracks insurance status across every active subcontractor. Click any file below to open the real spreadsheet or PDF. These are 1404-branded test outputs; in a real engagement they carry your brand.",
+  "deliverables": [
+    {
+      "skill": "bid-proposal",
+      "input": "default-input.json",
+      "type": "pdf",
+      "filename": "bid-proposal.pdf",
+      "preview_filename": "bid-proposal.png",
+      "name": "Bid proposal",
+      "description": "Nine-page branded bid package with scope of work, line-item pricing from rate card, exclusions, qualifications, and submittal. Drafted from takeoff data and project specs."
+    },
+    {
+      "skill": "aia-pay-app",
+      "input": "default-input.json",
+      "type": "xlsx",
+      "filename": "aia-pay-app.xlsx",
+      "preview_filename": "aia-pay-app.png",
+      "name": "AIA pay application",
+      "description": "G702 and G703 pay application sheets with continuation, retention calculation, change order tracking, and schedule of values reconciliation. Generated from job cost data."
+    },
+    {
+      "skill": "wip-schedule",
+      "input": "input.json",
+      "type": "xlsx",
+      "filename": "wip-schedule.xlsx",
+      "preview_filename": "wip-schedule.png",
+      "name": "WIP schedule",
+      "description": "Three-tab Excel: WIP Schedule, Prior Period, Change Log. Percentage-of-completion revenue recognition, billings in excess, costs in excess, and gross profit by job."
+    },
+    {
+      "skill": "coi-tracker",
+      "input": "default-input.json",
+      "type": "xlsx",
+      "filename": "coi-tracker.xlsx",
+      "preview_filename": "coi-tracker.png",
+      "name": "COI compliance dashboard",
+      "description": "Three-tab Excel: Dashboard, All Subcontractors, Expiring Soon. Tracks coverage limits, expiry dates, additional insured status, and waiver of subrogation across every sub."
+    }
+  ]
+}

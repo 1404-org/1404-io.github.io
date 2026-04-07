@@ -1,0 +1,43 @@
+{
+  "slug": "re-developer",
+  "industry": "Real Estate Development",
+  "intro": "Sample deliverables produced by the Real Estate Development persona. Each one is generated from live system data — pro formas pull from your underwriting model, draw packages assemble from your project management system, IC memos draft from underwriting outputs and comparable transactions, investor reports build from accounting and capital account data. Click any file below to open the real spreadsheet or PDF. These are 1404-branded test outputs; in a real engagement they carry your brand.",
+  "deliverables": [
+    {
+      "skill": "dev-pro-forma",
+      "input": "default-input.json",
+      "type": "xlsx",
+      "filename": "dev-pro-forma.xlsx",
+      "preview_filename": "dev-pro-forma.png",
+      "name": "Development pro forma",
+      "description": "Multi-tab Excel model: Summary, Assumptions, Sources & Uses, Revenue, OpEx, NOI & Cash Flow, Waterfall, Sensitivity. Updates when assumptions change."
+    },
+    {
+      "skill": "ic-memo",
+      "input": "default-input.json",
+      "type": "pdf",
+      "filename": "ic-memo.pdf",
+      "preview_filename": "ic-memo.png",
+      "name": "Investment committee memo",
+      "description": "Eleven-page IC memo with deal summary, market analysis, sponsor comparables, financial projections, risk register, and recommendation. Drafted from underwriting and comp data."
+    },
+    {
+      "skill": "draw-package",
+      "input": "default-input.json",
+      "type": "xlsx",
+      "filename": "draw-package.xlsx",
+      "preview_filename": "draw-package.png",
+      "name": "Construction draw package",
+      "description": "Six-tab Excel: Draw Summary, G702, G703, Change Order Log, Budget Summary, Lien Waiver Tracker. Assembled from project management and accounting systems."
+    },
+    {
+      "skill": "investor-report",
+      "input": "default-input.json",
+      "type": "pdf",
+      "filename": "investor-report.pdf",
+      "preview_filename": "investor-report.png",
+      "name": "Quarterly investor report",
+      "description": "Eight-page LP-facing quarterly report with portfolio summary, per-asset performance, capital account roll-forward, and waterfall status. Drafted from live operating and accounting data."
+    }
+  ]
+}
