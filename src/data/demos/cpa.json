@@ -1,0 +1,43 @@
+{
+  "slug": "cpa",
+  "industry": "CPA & Accounting",
+  "intro": "Sample deliverables produced by the CPA persona. Tax returns draft from trial balance data, 1099 packages assemble from AP detail with vendor classification and W-9 tracking, financial packages build from the client's accounting system, and engagement letters generate from firm terms and entity data. Click any file below to open the real spreadsheet or PDF. These are 1404-branded test outputs; in a real engagement they carry your firm's brand.",
+  "deliverables": [
+    {
+      "skill": "form-1120s",
+      "input": "input.json",
+      "type": "pdf",
+      "filename": "form-1120s.pdf",
+      "preview_filename": "form-1120s.png",
+      "name": "Form 1120-S (S-Corp tax return)",
+      "description": "Pre-filled IRS Form 1120-S with all 5 pages populated from trial balance data, cover sheet with KPI summary, and DRAFT watermark. Generated from the client's chart of accounts and trial balance — the 8-hour return becomes a 90-minute review."
+    },
+    {
+      "skill": "client-financial-package",
+      "input": "input.json",
+      "type": "pdf",
+      "filename": "client-financial-package.pdf",
+      "preview_filename": "client-financial-package.png",
+      "name": "Monthly financial package",
+      "description": "Branded client-facing financial report with P&L, balance sheet, cash flow, key ratios benchmarked against industry data, and variance commentary. Delivered to every bookkeeping client five business days after month-end."
+    },
+    {
+      "skill": "1099-package",
+      "input": "input.json",
+      "type": "xlsx",
+      "filename": "1099-package.xlsx",
+      "preview_filename": "1099-package.png",
+      "name": "1099 preparation package",
+      "description": "Multi-tab Excel workbook: vendor master list, W-9 collection status, payment totals by vendor, entity type classification with C-Corp/S-Corp exclusions, 1099-required flag, missing W-9 chase list, and filing checklist. Built from AP detail."
+    },
+    {
+      "skill": "engagement-letter",
+      "input": "input.json",
+      "type": "pdf",
+      "filename": "engagement-letter.pdf",
+      "preview_filename": "engagement-letter.png",
+      "name": "Engagement letter",
+      "description": "Branded engagement letter with scope of services, fee schedule, client and firm responsibilities, limitations and disclaimers, confidentiality clause, term and termination, and dual signature blocks. Generated from firm terms and entity data."
+    }
+  ]
+}
