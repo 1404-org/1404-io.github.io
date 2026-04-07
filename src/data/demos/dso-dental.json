@@ -1,0 +1,43 @@
+{
+  "slug": "dso-dental",
+  "industry": "DSO / Dental Operations",
+  "intro": "Sample deliverables produced by the DSO Operations Director persona. Financial dashboards benchmark KPIs against dental industry standards, AR aging tracks insurance and patient receivables by payer and location, acquisition target screens score practices on dental-specific criteria, and EBITDA normalization surfaces the add-backs PE boards need to see. Click any file below to open the real spreadsheet or PDF. These are 1404-branded test outputs; in a real engagement they carry your brand.",
+  "deliverables": [
+    {
+      "skill": "financial-dashboard",
+      "input": "input.json",
+      "type": "pdf",
+      "filename": "financial-dashboard.pdf",
+      "preview_filename": "financial-dashboard.png",
+      "name": "Financial KPI dashboard",
+      "description": "One-page PDF dashboard with real-time KPIs: cash position, AR aging, gross and net margin, current ratio, DSO, backlog, and revenue vs budget — each with trend arrows, prior period comparison, and industry benchmark. The CFO reviews one page instead of six spreadsheets."
+    },
+    {
+      "skill": "ar-aging",
+      "input": "input.json",
+      "type": "xlsx",
+      "filename": "ar-aging.xlsx",
+      "preview_filename": "ar-aging.png",
+      "name": "AR aging report",
+      "description": "Multi-tab Excel: Dashboard with total AR, DSO, aging distribution, and collection trends; Detail sheet with every customer broken into current, 31-60, 61-90, 91-120, and 120+ day buckets with retainage, contractual terms, last payment, and collection notes."
+    },
+    {
+      "skill": "target-screen",
+      "input": "default-input.json",
+      "type": "xlsx",
+      "filename": "target-screen.xlsx",
+      "preview_filename": "target-screen.png",
+      "name": "Acquisition target screen",
+      "description": "Scored acquisition target list with weighted criteria: revenue size, reputation, owner succession risk, geographic fit, and service overlap. Each target ranked with a composite score and color-coded tier — the development team stops evaluating 50 targets manually and focuses on the top 10."
+    },
+    {
+      "skill": "ebitda-normalize",
+      "input": "input.json",
+      "type": "xlsx",
+      "filename": "ebitda-normalize.xlsx",
+      "preview_filename": "ebitda-normalize.png",
+      "name": "EBITDA normalization",
+      "description": "Multi-year EBITDA bridge workbook with add-backs: above-market owner compensation, personal expenses, one-time costs, related-party adjustments. Normalized EBITDA by year with margin trends and year-over-year variance. The analysis that turns a $780K reported EBITDA into a $1.1M adjusted figure."
+    }
+  ]
+}
