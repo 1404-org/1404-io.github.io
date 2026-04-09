@@ -1,0 +1,51 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Connect integrations — 1404 Mission Control"
+  description="Connect QuickBooks Online, Microsoft 365, and Google Workspace to your Mission Control instance."
+>
+  <section class="max-w-2xl mx-auto px-6 pt-40 pb-24">
+    <h1 class="font-display text-4xl md:text-5xl text-text-primary mb-4">Connect an integration</h1>
+    <p class="text-text-muted text-lg mb-12">
+      Mission Control is a multi-tenant platform. To connect QuickBooks Online, Microsoft 365,
+      or Google Workspace to your account, go to your own Mission Control instance.
+    </p>
+
+    <div class="space-y-6">
+      <div class="border border-border rounded-lg p-6 bg-bg-surface">
+        <h2 class="font-display text-xl text-text-primary mb-2">1. Log in to your Mission Control</h2>
+        <p class="text-text-secondary text-sm">
+          Your URL looks like <code class="text-copper">https://{your-company}.mc.1404.io</code> —
+          check the welcome email from 1404 for the exact link.
+        </p>
+      </div>
+
+      <div class="border border-border rounded-lg p-6 bg-bg-surface">
+        <h2 class="font-display text-xl text-text-primary mb-2">2. Open the Integrations page</h2>
+        <p class="text-text-secondary text-sm">
+          Click <strong>Integrations</strong> in the left sidebar. You'll see cards for
+          QuickBooks Online, Microsoft 365, and Google Workspace.
+        </p>
+      </div>
+
+      <div class="border border-border rounded-lg p-6 bg-bg-surface">
+        <h2 class="font-display text-xl text-text-primary mb-2">3. Click Connect</h2>
+        <p class="text-text-secondary text-sm">
+          Each card has a <strong>Connect</strong> button that starts the OAuth consent flow
+          with the provider. For QBO and Google, you sign in directly. For Microsoft 365,
+          your tenant admin receives a link to grant consent once for the whole tenant.
+        </p>
+      </div>
+
+      <div class="border border-border rounded-lg p-6 bg-bg-surface">
+        <h2 class="font-display text-xl text-text-primary mb-2">Need help?</h2>
+        <p class="text-text-secondary text-sm">
+          Email <a href="mailto:holden@1404.io" class="text-copper hover:underline">holden@1404.io</a>
+          or call <a href="tel:+12486071414" class="text-copper hover:underline">+1 (248) 607-1414</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</PageLayout>
