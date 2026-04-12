@@ -1,0 +1,43 @@
+{
+  "slug": "distribution",
+  "industry": "Building Materials Distribution",
+  "intro": "Sample deliverables produced by the Distribution Operations Director persona. Cash flow forecasts model vendor payment timing against customer collections across multiple branches, AR aging tracks customer payment patterns with credit holds and disputed invoices, budget variance breaks down performance by branch and product line, and the monthly financial package delivers a board-ready close with distribution-specific benchmarks like GMROI, inventory turns, and fill rate. Click any file below to open the real spreadsheet or PDF.",
+  "deliverables": [
+    {
+      "skill": "cash-flow-forecast",
+      "input": "input.json",
+      "type": "xlsx",
+      "filename": "cash-flow-forecast.xlsx",
+      "preview_filename": "cash-flow-forecast.png",
+      "name": "13-week cash flow forecast",
+      "description": "Three-tab Excel: 13-week rolling forecast with vendor payment timing, customer collections across branches, line of credit draws, and scenario analysis for seasonal lumber pricing and spring building season demand."
+    },
+    {
+      "skill": "ar-aging",
+      "input": "input.json",
+      "type": "xlsx",
+      "filename": "ar-aging.xlsx",
+      "preview_filename": "ar-aging.png",
+      "name": "AR aging report",
+      "description": "Three-tab Excel: aging detail by customer with credit hold tracking and disputed invoice management, six-month trend with DSO analysis, and prioritized collection actions. Built for distributor payment patterns — no retainage, real credit disputes."
+    },
+    {
+      "skill": "budget-vs-actual",
+      "input": "input.json",
+      "type": "xlsx",
+      "filename": "budget-vs-actual.xlsx",
+      "preview_filename": "budget-vs-actual.png",
+      "name": "Budget vs. actual variance",
+      "description": "Four-tab Excel: monthly P&L with variance by product line and branch, executive summary, quarterly rollup, and 12-month trend. Revenue split by lumber/panels, fabrication, hardware, delivery, and value-added services."
+    },
+    {
+      "skill": "monthly-financials",
+      "input": "input.json",
+      "type": "pdf",
+      "filename": "monthly-financials.pdf",
+      "preview_filename": "monthly-financials.png",
+      "name": "Monthly financial package",
+      "description": "Board-ready PDF: P&L by product line, balance sheet with inventory as the dominant asset, cash flow statement, and 12 key ratios including GMROI, inventory turns, fill rate, delivery on-time %, and DSO. Revenue by branch trend."
+    }
+  ]
+}
