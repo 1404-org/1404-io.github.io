@@ -1,0 +1,43 @@
+{
+  "slug": "electrical",
+  "industry": "Electrical Contracting",
+  "intro": "Sample deliverables produced by the Electrical Operations Director persona. Change order recovery tracks every T&M ticket through approval with aging alerts, manpower loading shows crew capacity across all active projects by classification, the recruiting pipeline monitors open positions against market wage data, and apprentice hour tracking documents OJT progression toward journeyman. Click any file below to open the real spreadsheet or PDF.",
+  "deliverables": [
+    {
+      "skill": "co-recovery-tracker",
+      "input": "default-input.json",
+      "type": "xlsx",
+      "filename": "co-recovery-tracker.xlsx",
+      "preview_filename": "co-recovery-tracker.png",
+      "name": "Change order recovery tracker",
+      "description": "Three-tab Excel: Dashboard with recovery rate KPIs, change order detail by project with aging and status, T&M ticket log with GC signature tracking. Formula-driven revenue-at-risk alerts."
+    },
+    {
+      "skill": "manpower-loading",
+      "input": "default-input.json",
+      "type": "xlsx",
+      "filename": "manpower-loading.xlsx",
+      "preview_filename": "manpower-loading.png",
+      "name": "Manpower loading chart",
+      "description": "Three-tab Excel: Dashboard with utilization KPIs, 12-week loading chart by project with JW/AP/FM classification, apprentice ratio compliance monitor. Flags over- and under-staffed projects."
+    },
+    {
+      "skill": "recruiting-pipeline",
+      "input": "default-input.json",
+      "type": "xlsx",
+      "filename": "recruiting-pipeline.xlsx",
+      "preview_filename": "recruiting-pipeline.png",
+      "name": "Recruiting pipeline",
+      "description": "Three-tab Excel: Dashboard with conversion metrics and source effectiveness, full candidate pipeline with wage competitiveness analysis, open positions with market rate comparison from BLS data."
+    },
+    {
+      "skill": "electrical-service-ticket",
+      "input": "default-input.json",
+      "type": "pdf",
+      "filename": "electrical-service-ticket.pdf",
+      "preview_filename": "electrical-service-ticket.png",
+      "name": "Service work order",
+      "description": "Two-page branded PDF: service work order with customer info, work performed narrative, materials with markup, labor with OT/DT rates, equipment, and customer authorization signature block."
+    }
+  ]
+}

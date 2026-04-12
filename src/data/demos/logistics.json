@@ -1,0 +1,43 @@
+{
+  "slug": "logistics",
+  "industry": "Logistics & Shipping",
+  "intro": "Sample deliverables produced by the CFO persona configured for a multi-facility logistics operation. Cash flow forecasts model weekly inflows against carrier settlements and facility costs across regional hubs, AR aging tracks customer payment patterns with credit memo reconciliation, budget variance analysis breaks down performance by hub and cost category, and the monthly financial package delivers a board-ready close with logistics-specific benchmarks. Click any file below to open the real spreadsheet or PDF.",
+  "deliverables": [
+    {
+      "skill": "cash-flow-forecast",
+      "input": "input.json",
+      "type": "xlsx",
+      "filename": "cash-flow-forecast.xlsx",
+      "preview_filename": "cash-flow-forecast.png",
+      "name": "13-week cash flow forecast",
+      "description": "Three-tab Excel: entity-level 13-week rolling forecast with carrier settlement timing, per-hub cash allocation, and scenario analysis. Models bi-weekly payroll, monthly lease obligations, and quarterly insurance against weekly shipping revenue."
+    },
+    {
+      "skill": "ar-aging",
+      "input": "input.json",
+      "type": "xlsx",
+      "filename": "ar-aging.xlsx",
+      "preview_filename": "ar-aging.png",
+      "name": "AR aging report",
+      "description": "Three-tab Excel: aging detail by customer with credit memo tracking, six-month trend analysis with weighted DSO, and prioritized collection action items. Flags concentration risk and stale receivables."
+    },
+    {
+      "skill": "budget-vs-actual",
+      "input": "input.json",
+      "type": "xlsx",
+      "filename": "budget-vs-actual.xlsx",
+      "preview_filename": "budget-vs-actual.png",
+      "name": "Budget vs. actual variance",
+      "description": "Four-tab Excel: monthly P&L detail with variance analysis, executive summary with KPI cards, quarterly rollup, and 12-month trend. Revenue and cost breakdown by regional hub."
+    },
+    {
+      "skill": "monthly-financials",
+      "input": "input.json",
+      "type": "pdf",
+      "filename": "monthly-financials.pdf",
+      "preview_filename": "monthly-financials.png",
+      "name": "Monthly financial package",
+      "description": "Nine-page branded PDF: executive summary, income statement, balance sheet, cash flow statement, and key financial ratios with logistics-specific benchmarks. Board-ready monthly close deliverable."
+    }
+  ]
+}
