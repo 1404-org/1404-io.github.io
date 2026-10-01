@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /demos/
+Disallow: /art-guild/
 Sitemap: https://1404.io/sitemap-index.xml
