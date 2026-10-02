@@ -144,3 +144,45 @@ footer.site a{color:#fff}
   .band-head .more{margin-left:0}
   footer.site .r{margin-left:0;text-align:left}
 }
+
+/* ===== v2.1 (Holden 10-02: "too much blank space, mix with version 1") =====
+   Keep the navy header, footer and type; content sits in one 980px column of white cards on a light page, like v1. */
+body{background:var(--grey-2);font-size:14.5px;line-height:1.6}
+.wrap{max-width:980px;padding:0 24px}
+header.site .wrap,footer.site .wrap{max-width:var(--wrap);padding:0 32px}
+.hero{background:none;padding:28px 0 4px}
+.hero .wrap{max-width:980px}
+.hero .card-h{max-width:none;padding:26px 30px;box-shadow:none;border:1px solid var(--line)}
+h1{font-size:34px;margin:0 0 10px}
+.hero p.lead{max-width:none}
+.band,.band.grey,.band.light{background:none;padding:0;margin:14px 0 0}
+.band>.wrap{background:var(--white);border:1px solid var(--line);padding:24px 30px}
+.band.navy{background:none;color:rgba(255,255,255,.86)}
+.band.navy>.wrap{background:var(--navy);border-color:var(--navy);padding:30px}
+.band:last-of-type{margin-bottom:28px}
+footer.site{margin-top:28px}
+h2{font-size:24px}
+.band-head{margin:0 0 14px;gap:14px}
+.band-head p{font-size:13px}
+h3{font-size:17px}
+.intro{grid-template-columns:240px 1fr;gap:28px}
+.intro .stmt{font-size:20px}
+.steps>div{padding:0 18px}
+.steps p{font-size:13.5px}
+.card{padding:20px 22px;margin:0 0 14px}
+.band .card{border:1px solid var(--line);box-shadow:none}
+.grid2,.grid3{gap:14px}
+ul.clean li{margin:0 0 5px}
+ol.num>li{padding:12px 0 12px 46px}
+ol.num>li::before{top:8px;font-size:26px}
+.quote .mark{font-size:48px;height:28px}
+.quote p{font-size:22px;margin:4px 0 8px}
+@media (max-width:860px){
+  .wrap{padding:0 14px}
+  .band>.wrap{padding:20px 18px}
+  .hero{padding:16px 0 0}.hero .card-h{padding:20px 18px}
+  .intro{grid-template-columns:1fr;gap:10px}
+  h1{font-size:28px}
+}
+.hero .wrap{padding:0}
+@media (max-width:1020px){.hero .wrap,.band>.wrap{margin-left:14px;margin-right:14px}}
