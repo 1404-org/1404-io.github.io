@@ -186,3 +186,6 @@ ol.num>li::before{top:8px;font-size:26px}
 }
 .hero .wrap{padding:0}
 @media (max-width:1020px){.hero .wrap,.band>.wrap{margin-left:14px;margin-right:14px}}
+/* v2.2: no side-by-side statement column (it left dead space under the heading); heading sits above its content */
+.intro{display:block}
+.intro .stmt{font-size:22px;margin:0 0 10px}
